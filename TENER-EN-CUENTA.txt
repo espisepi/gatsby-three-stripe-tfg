@@ -1,0 +1,6 @@
+
+He tenido problemas a la hora de poner título en las imágenes utilizadas en la documentación. Se me descuadraban los párrafos junto con las imágenes. Todas las imágenes que utilizo son capturas de pantalla realizadas por mí, por lo tanto, no es necesario legalmente indicar de dónde las he obtenido puesto que yo soy el autor de dichas imágenes.
+
+El apartado de Bibliografía lo he añadido como una sección más del proyecto debido a que he tenido problemas con la forma en la que se hacía por defecto. No se leía correctamente el código que aparecía en el archivo "referencias.bib", así que cree un nuevo archivo llamado "bibliografia.tex" y lo rellené de igual forma que rellené todos los demás capítulos.
+
+He dejado en el proyecto frontend mis claves públicas y privadas de la API de Stripe por si el profesorado quisiese hacer pruebas. Soy consciente de que dichas claves deberían ser eliminadas a la hora de compartir un proyecto públicamente. (Actualización: las claves han sido eliminadas del proyecto)

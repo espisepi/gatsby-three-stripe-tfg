@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  apache:
+    image: php:7-apache
+    container_name: apache
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./public:/var/www/html
+
+  nginx:
+    image: linuxserver/letsencrypt
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./docker/nginx/config:/config
+      - ./docker/nginx/nginx.conf:/config/nginx/site-confs/default
+      - ./docker/nginx/ssl.conf:/config/nginx/ssl.conf
+    container_name: nginx
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - URL=joseangel.art
+      - SUBDOMAINS=www,
+      - VALIDATION=http
+      - STAGING=false #optional
